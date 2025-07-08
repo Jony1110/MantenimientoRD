@@ -14,7 +14,7 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
         <div class="login-container">
             <div class="login-header">
                 <h1 class="title">Iniciar Sesión</h1>
-                <p>Accede a tu cuenta para explorar oportunidades profesionales o gestionar tus vacantes</p>
+                <p>Accede a tu cuenta para registrar, controlar y dar seguimiento a los mantenimientos de tus equipos y vehículos.</p>
             </div>
 
             <?php if ($error): ?>
@@ -41,11 +41,11 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
             <!-- Tabs -->
             <div class="registro-form">
                 <div class="tabs">
-                    <div class="tab-item active" data-tab="candidato">Candidato</div>
-                    <div class="tab-item" data-tab="empresa">Empresa</div>
+                    <div class="tab-item active" data-tab="candidato">Técnico / Encargado</div>
+                    <div class="tab-item" data-tab="empresa">Empresa / Taller</div>
                 </div>
 
-                <!-- Formulario Candidato -->
+                <!-- Formulario Técnico -->
                 <div class="tab-content active" id="candidato-tab">
                     <form id="candidato-form" action="verificar_login.php" method="POST">
                         <div class="form-group">
@@ -56,11 +56,9 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
                             <label for="c-password" class="form-label">Contraseña *</label>
                             <div class="campo-password">
                                 <input type="password" id="c-password" name="contrasena" class="form-control" required>
-                                <button type="button" class="toggle-password"
-                                    onclick="togglePassword('c-password')">👁</button>
+                                <button type="button" class="toggle-password" onclick="togglePassword('c-password')">👁</button>
                             </div>
-                            <small class="form-text"><a href="recuperar_contrasena.html">¿Olvidaste tu
-                                    contraseña?</a></small>
+                            <small class="form-text"><a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a></small>
                         </div>
                         <div style="margin-top: 1.5rem;">
                             <button type="submit" class="btn btn-secondary btn-block">Iniciar Sesión</button>
@@ -72,7 +70,6 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
                 </div>
 
                 <!-- Formulario Empresa -->
-                <!-- Formulario Empresa -->
                 <div class="tab-content" id="empresa-tab">
                     <form id="empresa-form" action="verificar_login.php" method="POST">
                         <div class="form-group">
@@ -83,11 +80,9 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
                             <label for="e-password" class="form-label">Contraseña *</label>
                             <div class="campo-password">
                                 <input type="password" id="e-password" name="contrasena" class="form-control" required>
-                                <button type="button" class="toggle-password"
-                                    onclick="togglePassword('e-password')">👁</button>
+                                <button type="button" class="toggle-password" onclick="togglePassword('e-password')">👁</button>
                             </div>
-                            <small class="form-text"><a href="recuperar_contrasena.html">¿Olvidaste tu
-                                    contraseña?</a></small>
+                            <small class="form-text"><a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a></small>
                         </div>
                         <div style="margin-top: 1.5rem;">
                             <button type="submit" class="btn btn-secondary btn-block">Iniciar Sesión</button>
@@ -121,7 +116,7 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
         campo.type = campo.type === "password" ? "text" : "password";
     }
 
-    // Validación antes de enviar (solo ejemplo con formulario de candidato)
+    // Validación
     document.getElementById("candidato-form").addEventListener("submit", function(event) {
         const email = document.getElementById("c-email").value.trim();
         const pass = document.getElementById("c-password").value.trim();
@@ -140,8 +135,3 @@ $success = isset($_GET['success']) ? $_GET['success'] : "";
         }
     });
 </script>
-
-<!-- Estilos adicionales para coherencia visual -->
-<style>
-
-</style>

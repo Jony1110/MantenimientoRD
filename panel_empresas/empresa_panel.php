@@ -52,13 +52,19 @@ $candidatos = conexion::consulta("
             <div class="sidebar-menu">
                 <ul>
                     <li class="menu-item active">
-                        <a href="empresa_panel.php"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                        <a href="panel_equipos.php"><i class="fas fa-home"></i> <span>Panel</span></a>
                     </li>
                     <li class="menu-item">
-                        <a href="ofertas/crear_oferta.php"><i class="fas fa-search"></i> <span>Ofertas de Empleo</span></a>
+                        <a href="ofertas/crear_oferta.php"><i class="fas fa-search"></i> <span>Solicitud de Mantenimientos</span></a>
                     </li>
                     <li class="menu-item">
-                        <a href="candidatos.php"><i class="fas fa-users"></i> <span>Candidatos</span></a>
+                        <a href="ofertas/crear_equipo.php"><i class="fas fa-search"></i> <span>Equipos o Vehiculos</span></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="candidatos.php"><i class="fas fa-users"></i> <span>Historial de Mantenimiento</span></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="perfil_empresa.php"><i class="fas fa-building"></i> <span>Tecnicos Asignados</span></a>
                     </li>
                     <li class="menu-item">
                         <a href="perfil_empresa.php"><i class="fas fa-building"></i> <span>Perfil de la Empresa</span></a>

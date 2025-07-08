@@ -90,12 +90,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="registro-container">
                 <div class="registro-header">
                     <h1 class="title" id="tituloRegistro">Registro de Usuario</h1>
-                    <p>Complete sus datos para crear una cuenta.</p>
+                    <p>Registra tus datos para comenzar a gestionar los mantenimientos de tus equipos, vehículos y
+                        herramientas.</p>
                 </div>
                 <div class="registro-form">
                     <div class="tabs">
-                        <div class="tab-item active" data-tab="candidato">Candidato</div>
-                        <div class="tab-item" data-tab="empresa">Empresa</div>
+                        <div class="tab-item active" data-tab="candidato">Técnico / Encargado</div>
+                        <div class="tab-item" data-tab="empresa">Empresa / Supervisor</div>
                     </div>
 
                     <!-- Candidato -->
@@ -266,10 +267,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script>
         const tituloRegistro = document.getElementById('tituloRegistro');
 
+        // Actualizar dinámicamente el título según el tab activo
         function actualizarTitulo(tabActivo) {
             const tipo = tabActivo.dataset.tab;
-            tituloRegistro.textContent = tipo === 'empresa' ? 'Registro de Empresa' : 'Registro de Candidato';
+            tituloRegistro.textContent = tipo === 'empresa'
+                ? 'Registro de Empresa / Supervisor'
+                : 'Registro de Técnico / Encargado';
         }
+
 
         // Establecer título inicial según el tab activo
         const tabInicial = document.querySelector('.tab-item.active');
